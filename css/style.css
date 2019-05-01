@@ -1,0 +1,32 @@
+/*
+The following css is based on https://www.the-art-of-web.com/css/css-animation/
+Basically, it defines how one element should transition when another element is hovered upon.
+*/
+
+*{
+  background-color: #5878aa;
+}
+.wrapper{
+  margin: 100px auto;
+  max-width: 960px;
+}
+.box2 {
+  margin: 5rem;
+  box-shadow: 8px 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 120px;
+    background-color: pink;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
+  }
+  .box1:hover + .box2 {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+    left: calc(100% - 102px);
+    background: yellow;
+  }
